@@ -79,6 +79,7 @@ myManageHook = composeAll
 --
 myLayout = avoidStruts (
     Grid |||
+    GridRatio (3/2) |||
     Tall 1 (3/100) (1/2) |||
     Mirror (Tall 1 (3/100) (1/2)) |||
     tabbed shrinkText tabConfig |||
