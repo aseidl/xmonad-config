@@ -13,6 +13,7 @@ import XMonad.Layout.Fullscreen
 import XMonad.Layout.NoBorders
 import XMonad.Layout.Spiral
 import XMonad.Layout.Tabbed
+import XMonad.Layout.ThreeColumns
 import XMonad.Util.Run(spawnPipe)
 import XMonad.Util.EZConfig(additionalKeys)
 import XMonad.Layout.IM
@@ -78,12 +79,13 @@ myManageHook = composeAll
 -- which denotes layout choice.
 --
 myLayout = avoidStruts (
-    Grid |||
     GridRatio (3/2) |||
+    Grid |||
+    ThreeCol 1 (3/100) (1/3) |||
+    ThreeColMid 1 (3/100) (1/3) |||
     Tall 1 (3/100) (1/2) |||
     Mirror (Tall 1 (3/100) (1/2)) |||
     tabbed shrinkText tabConfig |||
-    Full |||
     noBorders (fullscreenFull Full))
 
 
