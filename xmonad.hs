@@ -79,8 +79,8 @@ myManageHook = composeAll
 -- which denotes layout choice.
 --
 myLayout = avoidStruts (
-    GridRatio (3/2) |||
-    Grid |||
+--    GridRatio (3/2) |||
+--    Grid |||
     ThreeCol 1 (3/100) (1/3) |||
     ThreeColMid 1 (3/100) (1/3) |||
     Tall 1 (3/100) (1/2) |||
